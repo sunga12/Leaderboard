@@ -14,6 +14,18 @@ const scores = [
   {
     name: 'Christian',
     score: 80
+  },
+  {
+    name: 'Salim',
+    score: 70
+  },
+  {
+    name: 'Otmane',
+    score: 60
+  },
+  {
+    name: 'Abdelaziz',
+    score: 50
   }
 ];
 
@@ -25,4 +37,4 @@ scores.forEach((entry) => {
     score.insertAdjacentHTML('beforeend', `${entry.name} : ${entry.score}`);
     scoreboard.appendChild(score);
 
-})
+});

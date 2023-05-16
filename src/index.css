@@ -1,0 +1,46 @@
+#leaderboard {
+  display: flex;
+  margin: auto;
+  width: 70%;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recent-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.scores {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 0.5rem 0;
+}
+
+form button {
+  align-self: flex-end;
+  margin: 1rem 0;
+}
+
+.add-score {
+  margin: 1rem;
+}
