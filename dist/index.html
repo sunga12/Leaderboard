@@ -7,17 +7,36 @@
 <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
 <body>
 
-  <section id="to-do">
     <div class="title">
-      <h1 class="todo-title">Today's ToList</h1>
+      <h1 class="title">Leaderboard</h1>
     </div>
-    <div class="add-task">
-      <input type="text" name="" id="add-to-list" placeholder="Add to your list...">
-    </div>
-    <ul class="todo-list">
-    </ul>
-    <button class="clear-all">Clear All Completed</button>
-  </section>
+
+    <section id="leaderboad">
+
+      <div class="scoreboard">
+        <div class="recent-title">
+          <h3>Recent Scores</h3>
+          <button type="reset">Refresh</button>
+        </div>
+
+        <ul class="scores">
+
+        </ul>
+
+
+
+
+      </div>
+
+      <div class="add-score">
+        <form action="submit">
+            <input type="text" name="name" id="new-name" placeholder="Your Name">
+            <input type="text" name="score" id="new-score" placeholder="Your Score">
+            <button type="submit">Submit</button>
+        </form>
+      </div>
+
+    </section>
     
 </body>
 </html>

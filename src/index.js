@@ -2,13 +2,27 @@ import _ from 'lodash';
 import './index.css';
 import './index.html';
 
-function component() {
-  const element = document.createElement('div');
+const scores = [
+  {
+    name: 'Sunga',
+    score: 100
+  },
+  {
+    name: 'Felix',
+    score: 90
+  },
+  {
+    name: 'Christian',
+    score: 80
+  }
+];
 
-    // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'my gywebpack'], ' ');
+const scoreboard = document.querySelector('.scores');
 
-  return element;
-}
+scores.forEach((entry) => {
 
-document.body.appendChild(component());
+    const score = document.createElement('li');
+    score.insertAdjacentHTML('beforeend', `${entry.name} : ${entry.score}`);
+    scoreboard.appendChild(score);
+
+})
