@@ -1,3 +1,6 @@
+import getTheData from './getData.js';
+
+
 export default async function postTheData() {
   const scoreForm = document.querySelector('.score-form');
 
@@ -11,6 +14,8 @@ export default async function postTheData() {
     },
     body: JSON.stringify(data),
   });
+
+  getTheData();
 
   return response.json();
 }
