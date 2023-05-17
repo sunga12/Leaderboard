@@ -45,7 +45,7 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<!DOCTYPE html>\\r\\n<html lang=\\\"en\\\">\\r\\n<head>\\r\\n    <meta charset=\\\"UTF-8\\\">\\r\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n    <title>To Do List</title>\\r\\n</head>\\r\\n<body>\\r\\n\\r\\n    <div class=\\\"title\\\">\\r\\n      <h1 class=\\\"title\\\">Leaderboard</h1>\\r\\n    </div>\\r\\n\\r\\n    <section id=\\\"leaderboard\\\">\\r\\n\\r\\n      <div class=\\\"scoreboard\\\">\\r\\n        <div class=\\\"recent-title\\\">\\r\\n          <h3>Recent Scores</h3>\\r\\n          <button type=\\\"reset\\\">Refresh</button>\\r\\n        </div>\\r\\n\\r\\n        <ul class=\\\"scores\\\">\\r\\n        </ul>\\r\\n      </div>\\r\\n\\r\\n      <div class=\\\"add-score\\\">\\r\\n        <h3>Add your score</h3>\\r\\n        <form action=\\\"submit\\\">\\r\\n            <input type=\\\"text\\\" name=\\\"name\\\" id=\\\"new-name\\\" placeholder=\\\"Your Name\\\">\\r\\n            <input type=\\\"text\\\" name=\\\"score\\\" id=\\\"new-score\\\" placeholder=\\\"Your Score\\\">\\r\\n            <button type=\\\"submit\\\">Submit</button>\\r\\n        </form>\\r\\n      </div>\\r\\n\\r\\n    </section>\\r\\n    \\r\\n</body>\\r\\n</html>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://leaderboard/./src/index.html?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// Module\nvar code = \"<!DOCTYPE html>\\r\\n<html lang=\\\"en\\\">\\r\\n<head>\\r\\n    <meta charset=\\\"UTF-8\\\">\\r\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r\\n    <title>To Do List</title>\\r\\n</head>\\r\\n<body>\\r\\n\\r\\n    <div class=\\\"title\\\">\\r\\n      <h1 class=\\\"title\\\">Leaderboard</h1>\\r\\n    </div>\\r\\n\\r\\n    <section id=\\\"leaderboard\\\">\\r\\n\\r\\n      <div class=\\\"scoreboard\\\">\\r\\n        <div class=\\\"recent-title\\\">\\r\\n          <h3>Recent Scores</h3>\\r\\n          <button id=\\\"refresh\\\" type=\\\"reset\\\">Refresh</button>\\r\\n        </div>\\r\\n\\r\\n        <ul class=\\\"scores\\\">\\r\\n        </ul>\\r\\n      </div>\\r\\n\\r\\n      <div class=\\\"add-score\\\">\\r\\n        <h3>Add your score</h3>\\r\\n        <form action=\\\"submit\\\" class=\\\"score-form\\\">\\r\\n            <input type=\\\"text\\\" name=\\\"user\\\" id=\\\"new-name\\\" placeholder=\\\"Your Name\\\"required>\\r\\n            <input type=\\\"text\\\" name=\\\"score\\\" id=\\\"new-score\\\" placeholder=\\\"Your Score\\\" required>\\r\\n            <button type=\\\"button\\\" id=\\\"submit-score\\\">Submit</button>\\r\\n        </form>\\r\\n      </div>\\r\\n\\r\\n    </section>\\r\\n    \\r\\n</body>\\r\\n</html>\";\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);\n\n//# sourceURL=webpack://leaderboard/./src/index.html?");
 
 /***/ }),
 
@@ -119,13 +119,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/getData.js":
+/*!************************!*\
+  !*** ./src/getData.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getTheData)\n/* harmony export */ });\n\r\nasync function getTheData() {\r\n\r\nconst scoreboard = document.querySelector('.scores');\r\nscoreboard.textContent = \"\";\r\n\r\nconst response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/RP7P3DgAooG12Jvz9hXa/scores')\r\n.then(res => res.json())\r\n.then(data => {\r\n  data.result.forEach((entry) => {\r\n  const score = document.createElement('li');\r\n  score.textContent = `${entry.user} : ${entry.score}`;\r\n  scoreboard.appendChild(score);\r\n  })\r\n});\r\n\r\nreturn response;\r\n}\n\n//# sourceURL=webpack://leaderboard/./src/getData.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.html */ \"./src/index.html\");\n\n\n\nconst scores = [\n  {\n    name: 'Sunga',\n    score: 100,\n  },\n  {\n    name: 'Felix',\n    score: 90,\n  },\n  {\n    name: 'Christian',\n    score: 80,\n  },\n  {\n    name: 'Salim',\n    score: 70,\n  },\n  {\n    name: 'Otmane',\n    score: 60,\n  },\n  {\n    name: 'Abdelaziz',\n    score: 50,\n  },\n];\n\nconst scoreboard = document.querySelector('.scores');\n\nscores.forEach((entry) => {\n  const score = document.createElement('li');\n  score.insertAdjacentHTML('beforeend', `${entry.name} : ${entry.score}`);\n  scoreboard.appendChild(score);\n});\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.html */ \"./src/index.html\");\n/* harmony import */ var _postData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./postData.js */ \"./src/postData.js\");\n/* harmony import */ var _getData_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getData */ \"./src/getData.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst refresh = document.querySelector('#refresh');\r\nconst submitGame = document.querySelector('#submit-score');\r\n\r\nwindow.onload = (0,_getData_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\r\nrefresh.addEventListener('click', (e) => {\r\n  (0,_getData_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n})\r\n\r\nsubmitGame.addEventListener('click', (e) => {\r\n  e.preventDefault;\r\n  (0,_postData_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n  \r\n})\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/postData.js":
+/*!*************************!*\
+  !*** ./src/postData.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ postTheData)\n/* harmony export */ });\nasync function postTheData() {\r\n\r\n  const scoreForm = document.querySelector('.score-form');\r\n\r\n  const formData = new FormData(scoreForm)\r\n  const data = Object.fromEntries(formData)\r\n\r\n  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/RP7P3DgAooG12Jvz9hXa/scores', {\r\n    method: 'POST',\r\n    headers: {\r\n      'Content-Type': 'application/json'\r\n    },\r\n    body: JSON.stringify(data)\r\n  }) \r\n\r\n  return response.json();\r\n}\n\n//# sourceURL=webpack://leaderboard/./src/postData.js?");
 
 /***/ })
 

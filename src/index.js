@@ -1,37 +1,18 @@
 import './index.css';
 import './index.html';
+import postTheData from './postData.js';
+import getTheData from './getData.js';
 
-const scores = [
-  {
-    name: 'Sunga',
-    score: 100,
-  },
-  {
-    name: 'Felix',
-    score: 90,
-  },
-  {
-    name: 'Christian',
-    score: 80,
-  },
-  {
-    name: 'Salim',
-    score: 70,
-  },
-  {
-    name: 'Otmane',
-    score: 60,
-  },
-  {
-    name: 'Abdelaziz',
-    score: 50,
-  },
-];
+const refresh = document.querySelector('#refresh');
+const submitGame = document.querySelector('#submit-score');
 
-const scoreboard = document.querySelector('.scores');
+window.onload = getTheData();
 
-scores.forEach((entry) => {
-  const score = document.createElement('li');
-  score.insertAdjacentHTML('beforeend', `${entry.name} : ${entry.score}`);
-  scoreboard.appendChild(score);
+refresh.addEventListener('click', () => {
+  getTheData();
+});
+
+submitGame.addEventListener('click', (e) => {
+  e.preventDefault();
+  postTheData();
 });

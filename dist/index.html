@@ -16,7 +16,7 @@
       <div class="scoreboard">
         <div class="recent-title">
           <h3>Recent Scores</h3>
-          <button type="reset">Refresh</button>
+          <button id="refresh" type="reset">Refresh</button>
         </div>
 
         <ul class="scores">
@@ -25,10 +25,10 @@
 
       <div class="add-score">
         <h3>Add your score</h3>
-        <form action="submit">
-            <input type="text" name="name" id="new-name" placeholder="Your Name">
-            <input type="text" name="score" id="new-score" placeholder="Your Score">
-            <button type="submit">Submit</button>
+        <form action="submit" class="score-form">
+            <input type="text" name="user" id="new-name" placeholder="Your Name"required>
+            <input type="text" name="score" id="new-score" placeholder="Your Score" required>
+            <button type="button" id="submit-score">Submit</button>
         </form>
       </div>
 
