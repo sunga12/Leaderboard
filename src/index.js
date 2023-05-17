@@ -15,5 +15,4 @@ refresh.addEventListener('click', () => {
 submitGame.addEventListener('click', (e) => {
   e.preventDefault();
   postTheData();
-  
 });

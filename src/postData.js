@@ -1,6 +1,5 @@
 import getTheData from './getData.js';
 
-
 export default async function postTheData() {
   const scoreForm = document.querySelector('.score-form');
 
