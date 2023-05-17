@@ -31,7 +31,8 @@ This is a simple Leaderboard list app, using webpack and ES6 features
 ### Key Features <a name="key-features"></a>
 
 - Leaderboard
-- Grey colour Scheme
+- Get Data from API
+- Post Data to API
 - Name and score for each entry
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -75,8 +76,8 @@ To get a local copy up and running, follow these steps.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add score functionality Features
-- Leaderboard API
+- More styling
+- Additional interactions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
