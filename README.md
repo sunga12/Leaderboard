@@ -41,7 +41,7 @@ This is a simple Leaderboard list app, using webpack and ES6 features
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming Soon]()
+- Coming Soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
