@@ -1,13 +1,66 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(#3aafa9, #17252a);
+}
+
+.heading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #def2f1;
+}
+
+button {
+  background-color: #17252a;
+  color: #feffff;
+  border-radius: 4px;
+  box-shadow: 0 0 16px 5px #2b7a78;
+  transition-duration: 0.5s;
+  border: 0;
+  padding: 0.5rem;
+}
+
+form button {
+  align-self: flex-end;
+  margin: 1rem 0;
+}
+
+button:hover {
+  color: #17252a;
+  background-color: #feffff;
+}
+
+.title {
+  margin: 1rem;
+  width: 80%;
+  font-size: 3rem;
+  color: #def2f1;
+}
+
 #leaderboard {
   display: flex;
-  margin: auto;
-  width: 70%;
+  margin: 5rem auto;
+  width: 80%;
 }
 
 .scoreboard {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2rem;
 }
 
 .recent-title {
@@ -34,13 +87,15 @@ form {
 
 form input {
   margin: 0.5rem 0;
+  background-color: #def2f1;
 }
 
-form button {
-  align-self: flex-end;
-  margin: 1rem 0;
+form input:hover {
+  text-indent: 10px;
+  transition-duration: 1s;
 }
 
 .add-score {
-  margin: 1rem;
+  margin: 2rem;
+  width: 70%;
 }
