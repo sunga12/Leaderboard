@@ -1,13 +1,67 @@
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(#3aafa9, #17252a);
+  overflow-x: hidden;
+}
+
+.heading {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #def2f1;
+}
+
+button {
+  background-color: #17252a;
+  color: #feffff;
+  border-radius: 4px;
+  box-shadow: 0 0 16px 5px #2b7a78;
+  transition-duration: 0.5s;
+  border: 0;
+  padding: 0.5rem;
+}
+
+form button {
+  align-self: flex-end;
+  margin: 1rem 0;
+}
+
+button:hover {
+  color: #17252a;
+  background-color: #feffff;
+}
+
+.title {
+  margin: 1rem;
+  width: 80%;
+  font-size: 3rem;
+  color: #def2f1;
+}
+
 #leaderboard {
   display: flex;
-  margin: auto;
-  width: 70%;
+  margin: 5rem auto;
+  width: 80%;
 }
 
 .scoreboard {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2rem;
 }
 
 .recent-title {
@@ -19,6 +73,16 @@
 
 .scores {
   padding: 0;
+  height: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 2px solid #17252a;
+}
+
+.score {
+  border: 1px solid #17252a;
+  color: #def2f1;
+  padding: 0.1rem 0.3rem;
 }
 
 li {
@@ -34,13 +98,32 @@ form {
 
 form input {
   margin: 0.5rem 0;
+  background-color: #def2f1;
 }
 
-form button {
-  align-self: flex-end;
-  margin: 1rem 0;
+form input:hover {
+  text-indent: 10px;
+  transition-duration: 1s;
 }
 
 .add-score {
-  margin: 1rem;
+  margin: 2rem;
+  width: 70%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #17252a;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #17252a;
+  border-radius: 10px;
 }

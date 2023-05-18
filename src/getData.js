@@ -7,7 +7,8 @@ export default async function getTheData() {
     .then((data) => {
       data.result.forEach((entry) => {
         const score = document.createElement('li');
-        score.textContent = `${entry.user} : ${entry.score}`;
+        score.className = 'score';
+        score.textContent = `${entry.user}: ${entry.score}`;
         scoreboard.appendChild(score);
       });
     });
