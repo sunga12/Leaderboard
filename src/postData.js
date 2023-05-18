@@ -14,6 +14,7 @@ export default async function postTheData() {
     body: JSON.stringify(data),
   });
 
+  scoreForm.reset();
   getTheData();
 
   return response.json();
